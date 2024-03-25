@@ -21,7 +21,7 @@ body {
 
 .title {
   font-size: 3rem;
-  color: #155e75;
+  color: #164e63;
 }
 
 .boards-container {
@@ -54,4 +54,9 @@ body {
   color: #ecfeff;
   border-radius: 8px;
   font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+}
+
+.btnStart:hover {
+  opacity: 90%;
 }

@@ -35,4 +35,28 @@ describe('Ship', () => {
     ship.hit();
     expect(ship.isSunk()).toBe(false);
   });
+
+  test('should set the ship coordinates correctly for horizontal orientation', () => {
+    const coordinate = { x: 2, y: 3 };
+    const orientation = 'horizontal';
+    ship.setCoordinates(coordinate, orientation);
+    const expectedCoordinates = [
+      { x: 2, y: 3 },
+      { x: 3, y: 3 },
+      { x: 4, y: 3 },
+    ];
+    expect(ship.coordinates).toEqual(expectedCoordinates);
+  });
+
+  test('should set the ship coordinates correctly for vertical orientation', () => {
+    const coordinate = { x: 2, y: 3 };
+    const orientation = 'vertical';
+    ship.setCoordinates(coordinate, orientation);
+    const expectedCoordinates = [
+      { x: 2, y: 3 },
+      { x: 2, y: 4 },
+      { x: 2, y: 5 },
+    ];
+    expect(ship.coordinates).toEqual(expectedCoordinates);
+  });
 });

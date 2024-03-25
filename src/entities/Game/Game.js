@@ -9,7 +9,7 @@ class Game {
     { name: 'Battleship', size: 4 },
     { name: 'Destroyer', size: 3 },
     { name: 'Submarine', size: 3 },
-    { name: 'Patrol Boat', size: 2 }
+    { name: 'Patrol Boat', size: 2 },
   ];
 
   switchPlayer() {
@@ -22,6 +22,10 @@ class Game {
 
   isGameOver() {
     return this.gameboards[0].allSunk() || this.gameboards[1].allSunk();
+  }
+
+  placeComputerShips() {
+    this.gameboards[1].placeShipsRandomly(this.shipList);
   }
 }
 

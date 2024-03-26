@@ -37,6 +37,10 @@ body {
   border: 1px solid #164e63;
 }
 
+.hidden {
+  display: none;
+}
+
 .square {
   display: flex;
   justify-content: center;
@@ -44,6 +48,12 @@ body {
   height: 40px;
   width: 40px;
   border: 1px solid #164e63;
+}
+
+.square:hover {
+  border: 1px solid #cffafe;
+  background-color: #164e63;
+  opacity: 10%;
 }
 
 .btnStart {
